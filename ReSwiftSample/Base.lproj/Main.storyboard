@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReSwiftSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4:05 AM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="woV-iC-YXh" customClass="ClockView" customModule="ReSwiftSample" customModuleProvider="target">
+                                <rect key="frame" x="263.5" y="20" width="95.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="66r-UZ-ySL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vW6-Eq-fDw">
+                                <rect key="frame" x="0.0" y="59" width="375" height="607"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOE-8u-t2k" customClass="CurrentFlightView" customModule="ReSwiftSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="170"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="n4n-Sf-Lma"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="siW-on-rpV" customClass="NextFlightsView" customModule="ReSwiftSample" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="170" width="375" height="437"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UOE-8u-t2k" firstAttribute="leading" secondItem="vW6-Eq-fDw" secondAttribute="leading" id="Izc-DD-uxM"/>
+                                    <constraint firstItem="UOE-8u-t2k" firstAttribute="top" secondItem="vW6-Eq-fDw" secondAttribute="top" id="hml-ez-vZR"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="vW6-Eq-fDw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4fE-Uj-MPh"/>
+                            <constraint firstItem="vW6-Eq-fDw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oh7-Fg-V7o"/>
+                            <constraint firstItem="vW6-Eq-fDw" firstAttribute="top" secondItem="woV-iC-YXh" secondAttribute="bottom" constant="18" id="e3c-ju-dGk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vW6-Eq-fDw" secondAttribute="bottom" constant="1" id="eeu-65-qvQ"/>
+                            <constraint firstItem="woV-iC-YXh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rwz-vL-lkg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="woV-iC-YXh" secondAttribute="trailing" constant="16" id="sGB-m8-Dkx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="clock" destination="woV-iC-YXh" id="bvI-wH-Z3A"/>
+                        <outlet property="currentFlightView" destination="UOE-8u-t2k" id="mXA-7w-XRS"/>
+                        <outlet property="nextFlightsView" destination="siW-on-rpV" id="abG-Xn-h93"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

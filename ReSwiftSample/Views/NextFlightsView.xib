@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NextFlightsView" customModule="ReSwiftSample" customModuleProvider="target">
+            <connections>
+                <outlet property="flightsView" destination="OPh-J8-DzK" id="csG-Ze-KQo"/>
+                <outlet property="noFlightsView" destination="1z1-cw-9wD" id="P2m-ON-d8Z"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ezy-FA-Blb">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jpT-Ww-AjF">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="398"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Upcoming Flights" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z1-cw-9wD">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OPh-J8-DzK" customClass="FlightsListView" customModule="ReSwiftSample" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="20.5" width="375" height="377.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="jpT-Ww-AjF" firstAttribute="top" secondItem="a3Q-J9-J0F" secondAttribute="top" id="KIp-dg-jjR"/>
+                <constraint firstItem="jpT-Ww-AjF" firstAttribute="trailing" secondItem="a3Q-J9-J0F" secondAttribute="trailing" id="TLJ-S9-ydH"/>
+                <constraint firstItem="jpT-Ww-AjF" firstAttribute="bottom" secondItem="a3Q-J9-J0F" secondAttribute="bottom" id="acK-kF-Baz"/>
+                <constraint firstItem="jpT-Ww-AjF" firstAttribute="leading" secondItem="a3Q-J9-J0F" secondAttribute="leading" id="kaG-xU-P6q"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="a3Q-J9-J0F"/>
+            <point key="canvasLocation" x="-13.5" y="-71"/>
+        </view>
+    </objects>
+</document>
