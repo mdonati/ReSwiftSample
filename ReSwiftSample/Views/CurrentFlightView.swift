@@ -24,6 +24,10 @@ class CurrentFlightView : UIView {
         }
     }
     
+    deinit {
+        self.viewModel?.status.unsubscribe(self)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setupXib()
